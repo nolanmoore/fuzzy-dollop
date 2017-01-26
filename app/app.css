@@ -23,3 +23,20 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+
+
+.pokecompare {
+  border-collapse: collapse;
+}
+
+.pokecompare th {
+  border-bottom: 1px solid;
+}
+.pokecompare td, .pokecompare th {
+  border-left: 1px solid;
+  padding: 5px 10px;
+}
+.pokecompare td:first-child, .pokecompare th:first-child {
+  border-left: none;
+}

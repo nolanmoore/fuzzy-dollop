@@ -1,1 +1,20 @@
-<p>This is the partial for view 1.</p>
+<p>View #1: The FOAAS (Fuck Off As A Service) messaging page</p>
+
+<form name="myForm">
+  <label>
+    To: <input type="text" name="name" ng-model="name" required>
+  </label>
+  <label>
+    From: <input type="text" name="from" ng-model="from" required>
+  </label><br />
+  <input type="radio" ng-model="level" value="yoda">Yoda</input>
+  <input type="radio" ng-model="level" value="off" checked>Basic</input>
+  <input type="radio" ng-model="level" value="shutup">Mean</input>
+  <input type="radio" ng-model="level" value="keep">Rude AF</input>
+  <input type="submit" value="Send" ng-click="submit()"/>
+</form>
+<h3>A small exchange between friends:</h3>
+<div style="text-indent: 25px;">
+  <p>{{message}}</p>
+  <p>{{subtitle}}</p>
+</div>

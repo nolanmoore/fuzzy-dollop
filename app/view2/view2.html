@@ -1,4 +1,43 @@
-<p>This is the partial for view 2.</p>
+<p>View #2: Poke Compare</p>
+
+<h3>How do you size up?</h3>
+<form>
+  <table class="pokecompare">
+    <tr>
+      <th></th>
+      <th>You</th>
+      <th>Pokemon</th>
+      <th>Comparison</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><input type="text" name="name" style="width: 100px" ng-model="user.name" required></td>
+      <td>
+        <select name="pokemonlist" ng-model="pokelist.selectedoption" ng-change="submit()">
+          <option value="">---Please select---</option>
+          <option ng-repeat="poke in pokelist.data" value="{{poke.id}}">{{poke.name}}</option>
+        </select>
+      </td>
+      <td>{{results.cname}}</td>
+    </tr>
+    <tr>
+      <th>Weight (kg)</th>
+      <td><input type="text" name="name" style="width: 100px" ng-model="user.weight" required></td>
+      <td>{{results.pweight}}</td>
+      <td>{{results.cweight}}</td>
+    </tr>
+    <tr>
+      <th>Height (m)</th>
+      <td><input type="text" name="name" style="width: 100px" ng-model="user.height" required></td>
+      <td>{{results.pheight}}</td>
+      <td>{{results.cheight}}</td>
+    </tr>
+  </table>
+  <!-- <input type="submit" value="Submit" ng-click="submit()" /> -->
+</form>
+
+<p id="timetoretrieve"></p>
+
 <p>
   Showing of 'interpolate' filter:
   {{ 'Current version is v%VERSION%.' | interpolate }}
